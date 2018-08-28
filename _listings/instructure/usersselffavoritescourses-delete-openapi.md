@@ -16,6 +16,32 @@ produces:
 consumes:
 - application/json
 paths:
+  /courses/{course_id}/quizzes/quiz_id/submissions/self/files:
+    post:
+      summary: Upload a file
+      description: Upload a file.
+      operationId: upload-a-file
+      x-api-path-slug: coursescourse-idquizzesquiz-idsubmissionsselffiles-post
+      parameters:
+      - in: query
+        name: name
+        description: The name of the quiz submission file
+      - in: query
+        name: on_duplicate
+        description: How to handle duplicate names
+      responses:
+        200:
+          description: OK
+      tags:
+      - Courses
+      - Course
+      - Id
+      - Quizzes
+      - Quiz
+      - Id
+      - Submissions
+      - Self
+      - Files
   /users/self/activity_stream:
     delete:
       summary: Hide all stream items
